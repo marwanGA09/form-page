@@ -73,11 +73,12 @@ body {
   }
 
   &__left--logo {
-    @include size(50rem, max(30rem, 32vw));
+    @include size(55rem, max(30rem, 32vw));
     @include flex(column, 1rem);
     background-image: url(./../img-and-vid/river.jpg);
     background-position: top;
     background-size: cover;
+    border-radius: 1.8rem 0 0 1.8rem;
 
     h1 {
       text-transform: capitalize;
@@ -90,11 +91,12 @@ body {
   }
   &__right {
     color: $color-white;
-    @include size(50rem, max(30rem, 52vw));
+    @include size(55rem, max(30rem, 52vw));
     background-color: rgb(38, 49, 46);
     @include spacing(0, 8rem 4rem);
     @include flex(column, 1rem);
     align-items: center;
+    border-radius: 0 1.8rem 1.8rem 0;
 
     .discription {
       width: 100%;
@@ -119,6 +121,7 @@ body {
       display: block;
       width: 88%;
       height: 2.5rem;
+      margin-top: 0.4rem;
 
       &:focus {
         border: 3px solid green;
@@ -143,7 +146,7 @@ body {
     }
 
     button[type] {
-      @include spacing(0.5rem, 0.8rem 2.6rem);
+      @include spacing(1rem, 0.8rem 2.6rem);
       background-color: $color-bg-btn;
       border: 0;
       border-radius: 0.4rem;

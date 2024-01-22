@@ -48,7 +48,7 @@ body {
   margin: 6rem auto 1rem;
 }
 .container__left--logo {
-  height: 50rem;
+  height: 55rem;
   width: max(30rem, 32vw);
   display: flex;
   flex-direction: column;
@@ -56,6 +56,7 @@ body {
   background-image: url(./../img-and-vid/river.jpg);
   background-position: top;
   background-size: cover;
+  border-radius: 1.8rem 0 0 1.8rem;
 }
 .container__left--logo h1 {
   text-transform: capitalize;
@@ -67,7 +68,7 @@ body {
 }
 .container__right {
   color: white;
-  height: 50rem;
+  height: 55rem;
   width: max(30rem, 52vw);
   background-color: rgb(38, 49, 46);
   margin: 0;
@@ -76,6 +77,7 @@ body {
   flex-direction: column;
   gap: 1rem;
   align-items: center;
+  border-radius: 0 1.8rem 1.8rem 0;
 }
 .container__right .discription {
   width: 100%;
@@ -98,6 +100,7 @@ body {
   display: block;
   width: 88%;
   height: 2.5rem;
+  margin-top: 0.4rem;
 }
 .container__right input:focus {
   border: 3px solid green;
@@ -119,7 +122,7 @@ body {
   text-decoration: none;
 }
 .container__right button[type] {
-  margin: 0.5rem;
+  margin: 1rem;
   padding: 0.8rem 2.6rem;
   background-color: green;
   border: 0;
