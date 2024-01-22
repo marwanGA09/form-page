@@ -18,9 +18,11 @@ body {
 .container {
   height: 100vh;
   width: 100vw;
-  position: relative;
   overflow: hidden;
   background-image: linear-gradient(-45deg, rgba(18, 102, 249, 0.8), rgba(6, 90, 235, 0.8), rgba(5, 80, 210, 0.8));
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .container__video {
   position: relative;
@@ -33,12 +35,10 @@ body {
 .container .sub-container {
   position: absolute;
   top: 0;
-  left: 8rem;
   width: 90vw;
   height: 100vh;
   display: flex;
   flex-wrap: wrap;
-  gap: 0;
   justify-content: center;
   align-items: center;
 }
@@ -49,7 +49,7 @@ body {
 }
 .container__left--logo {
   height: 50rem;
-  width: max(30rem, 28vw);
+  width: max(30rem, 32vw);
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -68,7 +68,7 @@ body {
 .container__right {
   color: white;
   height: 50rem;
-  width: max(30rem, 50vw);
+  width: max(30rem, 52vw);
   background-color: rgb(38, 49, 46);
   margin: 0;
   padding: 8rem 4rem;
@@ -102,6 +102,9 @@ body {
 .container__right input:focus {
   border: 3px solid green;
   box-shadow: 0 0 0.4rem 0.4rem green;
+}
+.container__right input:focus:invalid {
+  border: 3px solid red;
 }
 .container__right .container__sub--rg {
   width: 100%;

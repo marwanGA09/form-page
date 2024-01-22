@@ -37,7 +37,7 @@ body {
 
 .container {
   @include size(100vh, 100vw);
-  position: relative;
+  //   position: relative;
   overflow: hidden;
   background-image: linear-gradient(
     -45deg,
@@ -45,6 +45,9 @@ body {
     rgba($color-bg, 0.8),
     rgba(darken($color-bg, 5%), 0.8)
   );
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   &__video {
     position: relative;
@@ -56,12 +59,10 @@ body {
   .sub-container {
     position: absolute;
     top: 0;
-    left: 8rem;
     width: 90vw;
     height: 100vh;
     display: flex;
     flex-wrap: wrap;
-    gap: 0;
     justify-content: center;
     align-items: center;
 
@@ -72,7 +73,7 @@ body {
   }
 
   &__left--logo {
-    @include size(50rem, max(30rem, 28vw));
+    @include size(50rem, max(30rem, 32vw));
     @include flex(column, 1rem);
     background-image: url(./../img-and-vid/river.jpg);
     background-position: top;
@@ -89,7 +90,7 @@ body {
   }
   &__right {
     color: $color-white;
-    @include size(50rem, max(30rem, 50vw));
+    @include size(50rem, max(30rem, 52vw));
     background-color: rgb(38, 49, 46);
     @include spacing(0, 8rem 4rem);
     @include flex(column, 1rem);
@@ -122,6 +123,10 @@ body {
       &:focus {
         border: 3px solid green;
         box-shadow: 0 0 0.4rem 0.4rem $color-bg-btn;
+      }
+
+      &:focus:invalid {
+        border: 3px solid red;
       }
     }
 
