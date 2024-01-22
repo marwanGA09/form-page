@@ -1,0 +1,156 @@
+$color-bg: rgb(6, 90, 235);
+$color-bg-gray: rgb(38, 49, 46);
+$color-bg-btn: green;
+$color-white: white;
+
+@mixin flex($dn, $gap) {
+  display: flex;
+  flex-direction: $dn;
+  gap: $gap;
+}
+
+@mixin spacing($mar, $pad) {
+  margin: $mar;
+  padding: $pad;
+}
+
+@mixin size($h, $w) {
+  height: $h;
+  width: $w;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+*,
+*::after,
+*::before,
+input {
+  @include spacing(0, 0);
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+.container {
+  @include size(100vh, 100vw);
+  position: relative;
+  overflow: hidden;
+  background-image: linear-gradient(
+    -45deg,
+    rgba(lighten($color-bg, 5%), 0.8),
+    rgba($color-bg, 0.8),
+    rgba(darken($color-bg, 5%), 0.8)
+  );
+
+  &__video {
+    position: relative;
+    min-width: 100%;
+    min-height: 100%;
+    @include size(auto, auto);
+    z-index: -3;
+  }
+  .sub-container {
+    position: absolute;
+    top: 0;
+    left: 8rem;
+    width: 90vw;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    justify-content: center;
+    align-items: center;
+
+    .logo-img {
+      @include size(15rem, 15rem);
+      margin: 6rem auto 1rem;
+    }
+  }
+
+  &__left--logo {
+    @include size(50rem, max(30rem, 28vw));
+    @include flex(column, 1rem);
+    background-image: url(./../img-and-vid/river.jpg);
+    background-position: top;
+    background-size: cover;
+
+    h1 {
+      text-transform: capitalize;
+      font-size: 3.4rem;
+      padding: 2rem 1rem;
+      background-color: rgba($color-bg-gray, 0.6);
+      color: darken($color-white, 15%);
+      text-align: center;
+    }
+  }
+  &__right {
+    color: $color-white;
+    @include size(50rem, max(30rem, 50vw));
+    background-color: rgb(38, 49, 46);
+    @include spacing(0, 8rem 4rem);
+    @include flex(column, 1rem);
+    align-items: center;
+
+    .discription {
+      width: 100%;
+      font-size: 1.8rem;
+      //   text-align: center;
+    }
+    h3 {
+      text-align: center;
+      font-size: 2rem;
+    }
+
+    form {
+      @include flex(row, 0.5rem);
+      flex-wrap: wrap;
+    }
+
+    label {
+      width: 48%;
+    }
+
+    input {
+      display: block;
+      width: 88%;
+      height: 2.5rem;
+
+      &:focus {
+        border: 3px solid green;
+        box-shadow: 0 0 0.4rem 0.4rem $color-bg-btn;
+      }
+    }
+
+    .container__sub--rg {
+      width: 100%;
+      @include flex(column, 0.3rem);
+      align-items: start;
+      margin: 0.7rem 0 0 20rem;
+
+      .log-in {
+        color: lighten($color: $color-bg-btn, $amount: 47%);
+        text-decoration: none;
+      }
+    }
+
+    button[type] {
+      @include spacing(0.5rem, 0.8rem 2.6rem);
+      background-color: $color-bg-btn;
+      border: 0;
+      border-radius: 0.4rem;
+      color: $color-white;
+      font-size: 1.8rem;
+      font-weight: 500;
+      transition: all 0.2s;
+
+      &:hover {
+        color: $color-bg-btn;
+        background-color: $color-white;
+      }
+    }
+  }
+}
