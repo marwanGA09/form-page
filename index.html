@@ -3,77 +3,89 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>signup-form</title>
   </head>
   <body>
     <main class="container">
-      <div class="container__vidio">
-        <video
-          autoplay
-          loop
-          loop
-          src="./img-and-vid/1098410503-preview_240122162028.mp4"
-          type="video/mp4"
-        ></video>
-      </div>
-      <div class="container__left">
+      <video
+        class="container__video"
+        autoplay
+        loop
+        src="./img-and-vid/1098410503-preview_240122162028.mp4"
+        type="video/mp4"
+      ></video>
+      <div class="sub-container">
         <div class="container__left--logo">
+          <img
+            src="./img-and-vid/IMG_20230906_195534_389-photoaidcom-cropped.jpg (1).png"
+            alt="Dhera muslim youth jemea logo"
+            class="logo-img"
+            height="30px"
+            width="30px"
+          />
           <h1>Dhera muslim youth jemea</h1>
         </div>
+
+        <div class="container__right">
+          <p class="discription">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam eos
+            illo maxime. Dignissimos esse molestias quisquam iusto quae saepe a
+            quis, non beatae maxime aliquam sed sint hic! Voluptatem, nemo!
+          </p>
+
+          <h3>Let work together!</h3>
+          <form class="form" action="" method="get">
+            <label
+              >First name:<input
+                type="text"
+                name="f-name"
+                id="f-name"
+                placeholder="Marwan"
+                required /></label
+            ><label
+              >Last name:<input
+                type="text"
+                name="l-name"
+                id="l-name"
+                placeholder="Adem"
+                required /></label
+            ><label
+              >E-mail:
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="abcd@gmail.com"
+                required /></label
+            ><label
+              >Phone:<input
+                type="tel"
+                name="phone"
+                id="phone"
+                placeholder="+251900000000" /></label
+            ><label
+              >Password:
+              <input
+                type="password"
+                name="password"
+                id="password"
+                required /></label
+            ><label
+              >Confirm password:
+              <input type="password" name="c-password" id="c-password" required
+            /></label>
+            <div class="container__sub--rg">
+              <button type="submit">Create account</button>
+
+              <p>
+                Already have an account?
+                <a class="log-in" href="#">log in</a>
+              </p>
+            </div>
+          </form>
+        </div>
       </div>
-      <div class="container__right">
-        <p class="discription">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam eos
-          illo maxime. Dignissimos esse molestias quisquam iusto quae saepe a
-          quis, non beatae maxime aliquam sed sint hic! Voluptatem, nemo!
-        </p>
-      </div>
-      <h3>Let work together!</h3>
-      <form class="form" action="" method="get">
-        <label
-          >First name:<input
-            type="text"
-            name="f-name"
-            id="f-name"
-            placeholder="Marwan"
-            required /></label
-        ><label
-          >Last name:<input
-            type="text"
-            name="l-name"
-            id="l-name"
-            placeholder="Adem"
-            required /></label
-        ><label
-          >E-mail:
-          <input
-            type="email"
-            name="email"
-            id="email"
-            placeholder="abcd@gmail.com"
-            required /></label
-        ><label
-          >Phone:<input
-            type="tel"
-            name="phone"
-            id="phone"
-            placeholder="+251900000000" /></label
-        ><label
-          >Password:
-          <input
-            type="password"
-            name="password"
-            id="password"
-            required /></label
-        ><label
-          >Confirm password:
-          <input type="password" name="c-password" id="c-password" required
-        /></label>
-        <a href="#" class="btn">Create account</a>
-        <p>
-          Already have an account? <span><a href="#">log in</a></span>
-        </p>
-      </form>
     </main>
   </body>
 </html>
